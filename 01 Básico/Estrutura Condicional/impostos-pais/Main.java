@@ -27,6 +27,25 @@ public class Main {
         // total. O valor deve ser impresso com
         // duas casas decimais.
 
+        double salario = sc.nextDouble();
+        double imposto = 0;
+
+        if (salario > 2000.0) {
+            if ( salario <= 3000.0) {
+                imposto = (salario - 2000.0)* 0.08;
+            }
+            else if (salario > 3000.0 && salario <= 4500.0) {
+                imposto = (salario - 3000.0)*0.18 + 1000.0*0.08;
+            }
+            else if (salario > 4500.0) {
+                imposto = 1000.0 * 0.08 + 1500.0 * 0.18 + (salario - 4500) * 0.28;
+            }
+            System.out.printf("Imposto a ser pago: R$ %.2f.%n", imposto);
+        }
+        else {
+            System.out.println("Isento.");
+        }
+
         sc.close();
 
     }
