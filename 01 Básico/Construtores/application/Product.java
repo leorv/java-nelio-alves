@@ -1,8 +1,17 @@
 
 public class Product {
-    public String name;
-    public double price;
-    public int quantity;
+    private String name;
+    private double price;
+    private int quantity;
+
+    public Product() {
+        
+    }
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
 
     public Product(String name, double price, int quantity){
         this.name = name;
@@ -31,4 +40,47 @@ public class Product {
                 + " units, Total: $ "
                 + String.format("%.2f", totalValueInStock());
     }
+
+    /**
+     * @return String return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return double return the price
+     */
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * @param price the price to set
+     */
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    /**
+     * @return int return the quantity
+     */
+    public int getQuantity() {
+        return quantity;
+    }
+
+    /**
+     * @param quantity the quantity to set
+     */
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
 }
