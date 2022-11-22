@@ -1,8 +1,11 @@
 package entities;
 
-public class SavingsAccount extends Account {
+/**
+ * A classe SavingsAccount não pode ser herdada por nenhuma outra. Não posso,
+ * pode exemplo, criar uma classe SavingsAccountPlus.
+ */
+public final class SavingsAccount extends Account {
     private Double interestRate;
-
 
     public SavingsAccount() {
         super();

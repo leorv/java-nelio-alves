@@ -32,8 +32,12 @@ public class BusinessAccount extends Account {
         }
     }
 
+    /**
+     * Este método é {@code final} para evitarmos sobreposições múltiplas, que são portas
+     * de entrada para inconsistências.
+     */
     @Override
-    public void withdraw(Double amount) {
+    public final void withdraw(Double amount) {
         super.withdraw(amount);
         balance -= 2.0;
     }
